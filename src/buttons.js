@@ -1,102 +1,102 @@
 export const buttons = [
     {
         label: 'M',
-        value: '',
+        formula: 'M',
         type: 'func'
     },
     {
         label: '←',
-        value: '',
+        formula: '←',
         type: 'func'
     },
     {
         label: '',
-        value: '',
+        formula: '',
         type: 'empty'
     },
     {
         label: 'C',
-        value: 'ESC',
+        formula: 'ESC',
         type: 'clear'
     },
     {
         label: '7',
-        value: '7',
+        formula: '7',
         type: 'number'
     },
     {
         label: '8',
-        value: '8',
+        formula: '8',
         type: 'number'
     },
     {
         label: '9',
-        value: '9',
+        formula: '9',
         type: 'number'
     },
     {
         label: '÷',
-        value: '/',
+        formula: '/',
         type: 'operator'
     },
     {
         label: '4',
-        value: '4',
+        formula: '4',
         type: 'number'
     },
     {
         label: '5',
-        value: '5',
+        formula: '5',
         type: 'number'
     },
     {
         label: '6',
-        value: '6',
+        formula: '6',
         type: 'number'
     },
     {
         label: 'x',
-        value: '*',
+        formula: '*',
         type: 'operator'
     },
     {
         label: '1',
-        value: '1',
+        formula: '1',
         type: 'number'
     },
     {
         label: '2',
-        value: '2',
+        formula: '2',
         type: 'number'
     },
     {
         label: '3',
-        value: '3',
+        formula: '3',
         type: 'number'
     },
     {
         label: '-',
-        value: '-',
+        formula: '-',
         type: 'operator'
     },
     {
         label: '0',
-        value: '0',
+        formula: '0',
         type: 'number'
     },
     {
         label: '.',
-        value: '',
+        formula: '',
         type: 'number'
     },
     {
         label: '=',
-        value: '',
+        formula: '',
         type: 'calculate'
     },
     {
         label: '+',
-        value: '+',
+        formula: '+',
         type: 'operator'
     }
 ]

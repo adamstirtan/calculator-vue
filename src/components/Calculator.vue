@@ -1,7 +1,8 @@
 <script setup>
     import { buttons } from '../buttons'
 
-    const handleButtonClick = function(button) {
+    const handleButtonClick = function(event) {
+        const button = event.target
         console.log(button)
     }
 </script>
@@ -11,7 +12,7 @@
         <div class="display">
             <div class="brand">
                 <a href="https://github.com/adamstirtan/calcyoulator" target="_blank">
-                    🔗 Adam Stirtan
+                    Adam Stirtan
                 </a>
             </div>
             <div class="glass">
@@ -22,7 +23,7 @@
             <button
                 v-for="button in buttons"
                 :key="button.label"
-                :value="button.value"
+                :value="button.formula"
                 :class="button.type"
                 @click="handleButtonClick">
                 {{ button.label }}
@@ -52,6 +53,8 @@
         color: #fff;
         text-transform: uppercase;
         padding-bottom: 0.5rem;
+        font-size: 0.9em;
+        text-decoration: none;
     }
 
     .glass {
@@ -67,12 +70,10 @@
 
     .buttons {
         display: grid;
-        background-color: #ededed;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 1rem;
         padding: 1rem;
-        border-bottom-left-radius: 8px;
-        border-bottom-left-radius: 8px;
+        background-color: #fff;
     }
 
     button {
