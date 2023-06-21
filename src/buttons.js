@@ -1,12 +1,12 @@
 export const buttons = [
     {
-        label: '%',
-        value: '%',
+        label: 'M',
+        value: '',
         type: 'func'
     },
     {
-        label: 'π',
-        value: 'Math.pi',
+        label: '←',
+        value: '',
         type: 'func'
     },
     {
@@ -75,8 +75,28 @@ export const buttons = [
         type: 'number'
     },
     {
+        label: '-',
+        value: '-',
+        type: 'operator'
+    },
+    {
+        label: '0',
+        value: '0',
+        type: 'number'
+    },
+    {
+        label: '.',
+        value: '',
+        type: 'number'
+    },
+    {
         label: '=',
         value: '',
         type: 'calculate'
+    },
+    {
+        label: '+',
+        value: '+',
+        type: 'operator'
     }
 ]
