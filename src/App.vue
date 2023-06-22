@@ -5,6 +5,3 @@
 <template>
   <Calculator />
 </template>
-
-<style scoped>
-</style>
