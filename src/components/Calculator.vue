@@ -1,9 +1,22 @@
 <script setup>
+    import { ref } from 'vue'
     import { buttons } from '../buttons'
 
+    const display = ref(0)
+
     const handleButtonClick = function(event) {
-        const button = event.target
-        console.log(button)
+        const targetButton = event.target;
+        buttons.forEach(button => {
+            if (button.name == targetButton.id) {
+                calculator(button)
+            }
+        })
+    }
+
+    const calculator = function(button) {
+        if (button.class == 'number') {
+            display.value += button.formula
+        }
     }
 </script>
 
@@ -15,16 +28,17 @@
                     Adam Stirtan
                 </a>
             </div>
-            <div class="glass">
-                1337
+            <div class="glass" >
+                {{ display }}
             </div>
         </div>
         <div class="buttons">
             <button
                 v-for="button in buttons"
-                :key="button.label"
+                :key="button.name"
+                :id="button.name"
                 :value="button.formula"
-                :class="button.type"
+                :class="button.class"
                 @click="handleButtonClick">
                 {{ button.label }}
             </button>
@@ -85,6 +99,7 @@
     }
 
     button:hover {
+        cursor: pointer;
         box-shadow: inset 0 0 100px rgb(255, 255, 255, 0.3);
     }
 
@@ -92,15 +107,19 @@
         visibility: hidden;
     }
 
-    button.clear {
+    button.key {
         color: #fff;
-        background-color: #F44336;
+        background-color: #536DFE;
     }
 
-    button.func,
     button.operator {
         color: #fff;
         background-color: #757575;
+    }
+
+    button.clear {
+        color: #fff;
+        background-color: #F44336;
     }
 
     button.calculate {

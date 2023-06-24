@@ -1,102 +1,122 @@
 export const buttons = [
     {
+        name: 'memory',
         label: 'M',
         formula: 'M',
-        type: 'func'
+        class: 'key'
     },
     {
+        name: 'backspace',
         label: '←',
         formula: '←',
-        type: 'func'
+        class: 'key'
     },
     {
+        name: 'blank',
         label: '',
         formula: '',
-        type: 'empty'
+        class: 'empty'
     },
     {
+        name: 'clear',
         label: 'C',
         formula: 'ESC',
-        type: 'clear'
+        class: 'clear'
     },
     {
-        label: '7',
-        formula: '7',
-        type: 'number'
+        name: 7,
+        label: 7,
+        formula: 7,
+        class: 'number'
     },
     {
-        label: '8',
-        formula: '8',
-        type: 'number'
+        name: 8,
+        label: 8,
+        formula: 8,
+        class: 'number'
     },
     {
-        label: '9',
-        formula: '9',
-        type: 'number'
+        name: 9,
+        label: 9,
+        formula: 9,
+        class: 'number'
     },
     {
+        name: 'division',
         label: '÷',
         formula: '/',
-        type: 'operator'
+        class: 'operator'
     },
     {
-        label: '4',
-        formula: '4',
-        type: 'number'
+        name: 4,
+        label: 4,
+        formula: 4,
+        class: 'number'
     },
     {
-        label: '5',
-        formula: '5',
-        type: 'number'
+        name: 5,
+        label: 5,
+        formula: 5,
+        class: 'number'
     },
     {
-        label: '6',
-        formula: '6',
-        type: 'number'
+        name: 6,
+        label: 6,
+        formula: 6,
+        class: 'number'
     },
     {
+        name: 'multiplication',
         label: 'x',
         formula: '*',
-        type: 'operator'
+        class: 'operator'
     },
     {
-        label: '1',
-        formula: '1',
-        type: 'number'
+        name: 1,
+        label: 1,
+        formula: 1,
+        class: 'number'
     },
     {
-        label: '2',
-        formula: '2',
-        type: 'number'
+        name: 2,
+        label: 2,
+        formula: 2,
+        class: 'number'
     },
     {
-        label: '3',
-        formula: '3',
-        type: 'number'
+        name: 3,
+        label: 3,
+        formula: 3,
+        class: 'number'
     },
     {
+        name: 'subtraction',
         label: '-',
         formula: '-',
-        type: 'operator'
+        class: 'operator'
     },
     {
-        label: '0',
-        formula: '0',
-        type: 'number'
+        name: 0,
+        label: 0,
+        formula: 0,
+        class: 'number'
     },
     {
+        name: 'radix',
         label: '.',
         formula: '',
-        type: 'number'
+        class: 'number'
     },
     {
+        name: 'equals',
         label: '=',
         formula: '',
-        type: 'calculate'
+        class: 'calculate'
     },
     {
+        name: 'addition',
         label: '+',
         formula: '+',
-        type: 'operator'
+        class: 'operator'
     }
 ]
