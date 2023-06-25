@@ -1,8 +1,16 @@
 <script setup>
-    import { ref } from 'vue'
+    import { computed, reactive } from 'vue'
     import { buttons } from '../buttons'
 
-    const display = ref(0)
+    const state = reactive({
+        operation: [],
+        formula: [],
+        current: 0
+    })
+
+    const operationDisplay = computed(() => {
+        return state.operation.join('')
+    })
 
     const handleButtonClick = function(event) {
         const targetButton = event.target;
@@ -14,9 +22,16 @@
     }
 
     const calculator = function(button) {
-        if (button.class == 'number') {
-            display.value += button.formula
+        switch (button.class) {
+            case 'clear':
+                state.operation = []
+                break
+            case 'number':
+            case 'operator':
+                state.operation.push(button.label)
+                break
         }
+        
     }
 </script>
 
@@ -29,7 +44,12 @@
                 </a>
             </div>
             <div class="glass" >
-                {{ display }}
+                <div class="operation">
+                    {{ operationDisplay }}
+                </div>
+                <div class="current">
+                    {{ state.current }}
+                </div>
             </div>
         </div>
         <div class="buttons">
@@ -57,14 +77,15 @@
 
     .display {
         background-color: #212121;
-        text-align: left;
         padding: 1rem 1rem 1.5rem 1rem;
         vertical-align: center;
     }
 
     .brand,
     .brand a {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: #fff;
+        text-align: left;
         text-transform: uppercase;
         padding-bottom: 0.5rem;
         font-size: 0.9em;
@@ -74,12 +95,19 @@
     .glass {
         background: #fff;
         border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        font-size: 3em;
         padding: 1rem;
         text-align: right;
         font-family: 'Martian Mono', monospace;
         color: #000;
+    }
+
+    .operation {
+        min-height: 22px;
+        font-size: 1.1em;
+    }
+
+    .current {
+        font-size: 3em;
     }
 
     .buttons {
