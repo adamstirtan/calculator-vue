@@ -24,6 +24,30 @@ export const buttons = [
         class: 'clear'
     },
     {
+        name: 'sqrt',
+        label: '√',
+        formula: 'Math.sqrt',
+        class: 'func'
+    },
+    {
+        name: 'pi',
+        label: 'π',
+        formula: 'Math.pi',
+        class: 'func'
+    },
+    {
+        name: '(',
+        label: '(',
+        formula: '(',
+        class: 'operator'
+    },
+    {
+        name: ')',
+        label: ')',
+        formula: ')',
+        class: 'operator'
+    },
+    {
         name: 7,
         label: 7,
         formula: 7,

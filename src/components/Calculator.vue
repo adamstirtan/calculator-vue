@@ -28,10 +28,16 @@
                 break
             case 'number':
             case 'operator':
+            case 'func':
                 state.operation.push(button.label)
                 break
+            case 'calculate':
+                calculate()
         }
-        
+    }
+
+    const calculate = function() {
+        state.current = 42
     }
 </script>
 
@@ -119,9 +125,9 @@
     }
 
     button {
-        height: 80px;
+        height: 64px;
         border: none;
-        border-radius: 30px;
+        border-radius: 16px;
         font-size: 2em;
         background-color: #bdbdbd;
     }
@@ -140,7 +146,8 @@
         background-color: #536DFE;
     }
 
-    button.operator {
+    button.operator,
+    button.func {
         color: #fff;
         background-color: #757575;
     }
