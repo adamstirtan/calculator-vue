@@ -30,6 +30,7 @@
             case 'operator':
             case 'func':
                 state.operation.push(button.label)
+                state.formula.push(button.formula)
                 break
             case 'calculate':
                 calculate()
@@ -38,6 +39,7 @@
 
     const calculate = function() {
         state.current = 42
+        console.log(`formula: {state.formula}`)
     }
 </script>
 
